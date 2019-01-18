@@ -2,6 +2,7 @@
 ACME_PATH=$1
 docker build $ACME_PATH -t zeeraw/acme.vall.in:latest
 docker run --rm --name acmedns \
+    -u 500:500 \
     -p 53:53 \
     -p 53:53/udp \
     -p 80:80 \
