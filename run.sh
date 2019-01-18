@@ -6,6 +6,7 @@ docker run --rm --name acmedns \
     -p 53:53 \
     -p 53:53/udp \
     -p 80:80 \
+    -p 443:443 \
     -v $ACME_PATH/config:/etc/acme-dns:ro \
     -v $ACME_PATH/data:/var/lib/acme-dns \
     -v $ACME_PATH/certs:/var/certs \
