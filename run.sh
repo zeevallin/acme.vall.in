@@ -6,4 +6,5 @@ docker run --rm --name acmedns \
     -p 80:80 \
     -v $ACME_PATH/config:/etc/acme-dns:ro \
     -v $ACME_PATH/data:/var/lib/acme-dns  \
+    -v $ACME_PATH/certs:/var/lib/certs  \
     -d joohoi/acme-dns
